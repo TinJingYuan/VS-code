@@ -1,36 +1,128 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>旅程回顧</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>潛水地點介紹</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       background-color: #f4f4f4;
       text-align: center;
     }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+    }
+
+    nav {
+      background: #444;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px #007bff;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    nav button:hover {
+      background: #0056b3;
+      box-shadow: 0 0 20px #66b2ff, 0 0 30px #66b2ff;
+      transform: scale(1.05);
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #007bff; }
+      50% { box-shadow: 0 0 20px #66b2ff; }
+      100% { box-shadow: 0 0 10px #007bff; }
+    }
+
     main {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 30px;
       max-width: 800px;
       margin: auto;
+      background: white;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    .spot {
+      margin-bottom: 2rem;
+    }
+
+    .spot img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 1em;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>潛水地點介紹</h1>
+  </header>
+  <nav>
+    <button onclick="navigate('index.html')">首頁</button>
+    <button onclick="navigate('journey.html')">地點</button>
+    <button onclick="navigate('gallery.html')">相簿</button>
+    <button onclick="navigate('contact.html')">聯絡我</button>
+  </nav>
   <main>
-    <h1>旅程回顧</h1>
-    <p>這趟潛水之旅令人難以忘懷。湛藍的海水中，珊瑚礁與熱帶魚群交織成一幅生動的畫面。
-    每一次深呼吸，每一次下潛，彷彿都在探索一個嶄新的世界。即使面對突如其來的大浪，心中的熱情與好奇從未減退。</p>
-    
-    <p>透過這趟旅程，我更加了解自己，體驗了大自然最真實的力量。未來，我希望能再次背上裝備，繼續追尋那片未知的海洋。</p>
+    <div class="spot">
+      <h2>綠島</h2>
+      <p>綠島擁有湛藍清澈的海水、珊瑚礁和多樣海洋生物，是台灣最熱門的潛水天堂之一。</p>
+      <img src="green_island.jpg" alt="綠島潛水風景" />
+    </div>
 
-    <button onclick="location.href='index.html'">回首頁</button>
+    <div class="spot">
+      <h2>小琉球</h2>
+      <p>小琉球以海龜聞名，近岸即可見到牠們優游，是浮潛與初學者潛水的絕佳選擇。</p>
+      <img src="xiaoliuqiu.jpg" alt="小琉球海龜" />
+    </div>
+
+    <div class="spot">
+      <h2>蘭嶼</h2>
+      <p>蘭嶼原始自然的海岸與神秘海底洞穴，吸引許多資深潛水客前來探索。</p>
+      <img src="lanyu.jpg" alt="蘭嶼海底景色" />
+    </div>
   </main>
+  <footer>
+    <p>&copy; 2025 潛水地點散冊</p>
+  </footer>
+
+  <script>
+    function navigate(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
