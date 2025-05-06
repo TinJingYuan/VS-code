@@ -58,6 +58,7 @@
       max-width: 800px;
       margin: auto;
       background: white;
+      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -84,8 +85,40 @@
       padding: 1em;
       margin-top: 2rem;
     }
+    header {
+  background: #333;
+  color: white;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  background: #444;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  top: 70px; /* 跟 header 高度對齊 */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+main {
+  padding: 30px;
+  max-width: 800px;
+  margin: 140px auto 0 auto; /* 為了讓 main 內容不被 header/nav 蓋住 */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
   </style>
-<div class="fixed">
 </head>
 <body>
   <header>
@@ -96,7 +129,6 @@
     <button onclick="navigate('journey.html')">地點</button>
     <button onclick="navigate('contact.html')">聯絡我</button>
   </nav>
-</div>
   <main>
     <div class="spot">
       <h2>綠島</h2>
