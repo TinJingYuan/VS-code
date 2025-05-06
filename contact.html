@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+    }
+
+    nav {
+      background: #444;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px #007bff;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    nav button:hover {
+      background: #0056b3;
+      box-shadow: 0 0 20px #66b2ff, 0 0 30px #66b2ff;
+      transform: scale(1.05);
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #007bff; }
+      50% { box-shadow: 0 0 20px #66b2ff; }
+      100% { box-shadow: 0 0 10px #007bff; }
+    }
+
+    main {
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    a.email-link {
+      color: #007bff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a.email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 1em;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>聯絡我</h1>
+  </header>
+  <nav>
+    <button onclick="navigate('index.html')">首頁</button>
+    <button onclick="navigate('journey.html')">地點</button>
+    <button onclick="navigate('gallery.html')">相簿</button>
+    <button onclick="navigate('contact.html')">聯絡我</button>
+  </nav>
+  <main>
+    <h2>聯絡方式</h2>
+    <p>歡迎任何潛水相關的合作、詢問或建議！</p>
+    <p>📧 電子信箱：<a href="mailto:yourname@gmail.com" class="email-link">yourname@gmail.com</a></p>
+    <p>請記得將 <strong>yourname@gmail.com</strong> 改成你自己的 Gmail。</p>
+  </main>
+  <footer>
+    <p>&copy; 2025 潛水地點散冊</p>
+  </footer>
+
+  <script>
+    function navigate(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
