@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>令我最難忘的旅程</title>
+  <title>我的潛水地點散冊</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -67,20 +67,39 @@
         font-size: 1.4rem;
       }
     }
+    nav button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #007bff;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: #0056b3;
+  box-shadow: 0 0 20px #66b2ff, 0 0 30px #66b2ff;
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
   <header>
-    <h1>令我最難忘的旅程</h1>
+    <h1>潛水地點散冊</h1>
   </header>
   <nav>
     <button onclick="navigate('index.html')">首頁</button>
-    <button onclick="navigate('journey.html')">旅程回顧</button>
+    <button onclick="navigate('journey.html')">地點</button>
     <button onclick="navigate('gallery.html')">相簿</button>
     <button onclick="navigate('contact.html')">聯絡我</button>
   </nav>
   <main>
-    <p>這次的旅程是我一生中最難忘的經歷，充滿了驚喜與感動。讓我帶你回顧那些難忘的時刻！</p>
+    <p>潛水懶人包2025 全台灣10個必去潛水點推薦、注意事項</p>
+    <img src="https://chargeraccount.org/wp-content/uploads/2023/06/K7Kk3DSxN0r4AVhONa9ruggbas3DWRIrbnHw1dJc-1-900x600.jpg"style="max-width: 100%; height: auto;" />
+    <p>本網頁用途為提供潛客與旅客潛水導覽</p>
   </main>
   <script>
     function navigate(page) {
